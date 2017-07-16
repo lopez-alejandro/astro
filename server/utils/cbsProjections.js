@@ -157,4 +157,6 @@ export async function get_cbs_projections() {
   }
   storeAsCsv(csv, 'DST');
   csv = '';
+
+  return true;
 }

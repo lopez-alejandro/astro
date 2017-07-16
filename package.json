@@ -17,6 +17,7 @@
     "jade": "~1.11.0",
     "morgan": "~1.7.0",
     "node-table-to-csv": "^0.1.0",
+    "python-shell": "^0.4.0",
     "rimraf": "^2.6.1",
     "serve-favicon": "~2.3.2",
     "whatwg-fetch": "^2.0.3"

@@ -168,4 +168,6 @@ export async function get_espn_projections() {
 
   storeAsCsv(csv, POSITIONS['DEF']);
   csv = '';
+
+  return true;
 }

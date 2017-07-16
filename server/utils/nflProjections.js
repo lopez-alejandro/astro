@@ -166,4 +166,6 @@ export async function get_nfl_projections() {
 
   storeAsCsv(csv, SOURCES['NFL'], POSITIONS['DEF']);
   csv = '';
+
+  return true;
 }
