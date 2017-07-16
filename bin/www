@@ -3,7 +3,8 @@
 /**
  * Module dependencies.
  */
-
+require('babel-register');
+require('babel-polyfill');
 var app = require('../app');
 var debug = require('debug')('astro:server');
 var http = require('http');
