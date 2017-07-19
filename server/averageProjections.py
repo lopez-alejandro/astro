@@ -5,9 +5,9 @@ import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 # NFL #
-nfl_qb_df = pd.read_csv(basedir + '/../data/projections/nfl/nfl_projections_qb.csv', skiprows=1,nrows=60).sort_values('Player')
+nfl_qb_df = pd.read_csv(basedir + '/../data/projections/nfl/nfl_projections_qb.csv', skiprows=1).sort_values('Player')
 
-nfl_rb_df = pd.read_csv(basedir + '/../data/projections/nfl/nfl_projections_rb.csv', skiprows=1, nrows=60)
+nfl_rb_df = pd.read_csv(basedir + '/../data/projections/nfl/nfl_projections_rb.csv', skiprows=1)
 
 nfl_wr_df = pd.read_csv(basedir + '/../data/projections/nfl/nfl_projections_wr.csv', skiprows=1)
 
@@ -32,7 +32,7 @@ espn_k_df = pd.read_csv(basedir + '/../data/projections/espn/espn_projections_k.
 espn_def_df = pd.read_csv(basedir + '/../data/projections/espn/espn_projections_def.csv', skiprows=1)
 
 # CBS #
-cbs_qb_df = pd.read_csv(basedir + '/../data/projections/cbs/cbs_projections_qb.csv', skiprows=2, nrows=60).sort_values('Player')
+cbs_qb_df = pd.read_csv(basedir + '/../data/projections/cbs/cbs_projections_qb.csv', skiprows=2).sort_values('Player')
 #print(cbs_qb_df)
 
 cbs_rb_df = pd.read_csv(basedir + '/../data/projections/cbs/cbs_projections_rb.csv', skiprows=2)
@@ -44,3 +44,7 @@ cbs_te_df = pd.read_csv(basedir + '/../data/projections/cbs/cbs_projections_te.c
 cbs_k_df = pd.read_csv(basedir + '/../data/projections/cbs/cbs_projections_k.csv', skiprows=2)
 
 cbs_def_df = pd.read_csv(basedir + '/../data/projections/cbs/cbs_projections_def.csv', skiprows=1)
+
+def computeAverageQb(cbs_df, espn_df, nfl_df):
+    # compute the average for all qbs. Not all players show up in all sources so we will only compute the average of players that are in all three sources
+    print('hello')

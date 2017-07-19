@@ -81,7 +81,7 @@ export async function get_cbs_projections() {
   let table;
 
   // get QB data
-  for(var i = 0; i < 1; i++) {
+  for(var i = 0; i < 2; i++) {
     data = await getHtml(CBS_URL, 'QB', i);
     table = await getTable(data);
     let removeHeaders = false;
@@ -137,7 +137,7 @@ export async function get_cbs_projections() {
     data = await getHtml(CBS_URL, 'K', i);
     table = await getTable(data);
     let removeHeaders = false;
-  
+
     csv += getCsv(table, false);
   }
   storeAsCsv(csv, 'K');
