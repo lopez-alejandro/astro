@@ -7,11 +7,6 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 # NFL #
 nfl_qb_df = pd.read_csv(basedir + '/../data/projections/nfl/nfl_projections_qb.csv', skiprows=1,nrows=60).sort_values('Player')
 
-#print(nfl_qb_df)
-
-test = nfl_qb_df[nfl_qb_df['Player'].str.contains('dfgdsf')]
-print(test)
-
 nfl_rb_df = pd.read_csv(basedir + '/../data/projections/nfl/nfl_projections_rb.csv', skiprows=1, nrows=60)
 
 nfl_wr_df = pd.read_csv(basedir + '/../data/projections/nfl/nfl_projections_wr.csv', skiprows=1)

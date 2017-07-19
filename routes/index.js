@@ -12,9 +12,7 @@ router.get('/', async function(req, res, next) {
   await get_espn_projections();
   await get_cbs_projections();
 
-  getAverageProjections()
-
-  res.send(get_nfl_projections());
+  res.send('hi');
 });
 
 module.exports = router;

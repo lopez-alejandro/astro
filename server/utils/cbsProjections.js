@@ -137,10 +137,8 @@ export async function get_cbs_projections() {
     data = await getHtml(CBS_URL, 'K', i);
     table = await getTable(data);
     let removeHeaders = false;
-    if(i > 0) {
-      removeHeaders = true;
-    }
-    csv += getCsv(table, removeHeaders);
+  
+    csv += getCsv(table, false);
   }
   storeAsCsv(csv, 'K');
   csv = '';
@@ -150,10 +148,8 @@ export async function get_cbs_projections() {
     data = await getHtml(CBS_URL, 'DEF', i);
     table = await getTable(data);
     let removeHeaders = false;
-    if(i > 0) {
-      removeHeaders = true;
-    }
-    csv += getCsv(table, removeHeaders);
+
+    csv += getCsv(table, false);
   }
   storeAsCsv(csv, 'DST');
   csv = '';
