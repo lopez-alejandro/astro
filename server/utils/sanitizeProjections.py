@@ -97,14 +97,24 @@ def checkPosition(position):
 def sanitize(position):
     position_df = checkPosition(position)
     cbs_row_skip = 2
+    fp_row_skip = 1
     if position == 'k' or position == 'def':
         cbs_row_skip = 1
+        fp_row_skip = 0
     print('/../../data/projections/cbs/cbs_projections_'+position+'.csv')
     cbs_df = pd.read_csv(basedir + '/../../data/projections/cbs/cbs_projections_'+position+'.csv', skiprows=cbs_row_skip).rename(columns={'FPTS': 'Points'}).sort_values('Player')
-    nfl_df = pd.read_csv(basedir + '/../../data/projections/nfl/nfl_projections_'+position+'.csv', skiprows=1).rename(columns={'Team': 'Player'}).sort_values('Player')
-    espn_df = pd.read_csv(basedir + '/../../data/projections/espn/espn_projections_'+position+'.csv', skiprows=1).rename(columns={'PLAYER, TEAM POS':'Player', 'PTS': 'Points'}).sort_values('Player')
+    cbs_df.name = 'cbs'
 
-    projections = [ cbs_df, nfl_df, espn_df ]
+    nfl_df = pd.read_csv(basedir + '/../../data/projections/nfl/nfl_projections_'+position+'.csv', skiprows=1).rename(columns={'Team': 'Player'}).sort_values('Player')
+    nfl_df.name = 'nfl'
+
+    espn_df = pd.read_csv(basedir + '/../../data/projections/espn/espn_projections_'+position+'.csv', skiprows=1).rename(columns={'PLAYER, TEAM POS':'Player', 'PTS': 'Points'}).sort_values('Player')
+    espn_df.name = 'espn'
+
+    fp_df = pd.read_csv(basedir + '/../../data/projections/fp/fp_projections_'+position+'.csv', skiprows=fp_row_skip).rename(columns={'FPTS': 'Points'}).sort_values('Player')
+    fp_df.name = 'fp'
+
+    projections = [ cbs_df, nfl_df, espn_df, fp_df ]
 
     # now that we have loaded all of our '+position+' data we can go ahead and replace the name of those players that match a name in our roster dataframe
 
@@ -128,20 +138,24 @@ def sanitize(position):
             if i not in whitelist:
                 proj.drop(i, inplace=True)
     # now remove any duplicates based on the name
-    cbs_df = cbs_df.drop_duplicates('Player')
-    nfl_df = nfl_df.drop_duplicates('Player')
-    espn_df = espn_df.drop_duplicates('Player')
+    for df in projections:
+        df.drop_duplicates('Player', inplace=True)
 
     # at this point all the '+position+' dataframes are properly sanitized
     # we can now save them as csv files and store them as csv files. index is false
     # since we don't care about the indices of the rows
-    cbs_df.to_csv(basedir + '/../../data/projections/cbs/cbs_projections_'+position+'.csv', index=False)
-    nfl_df.to_csv(basedir + '/../../data/projections/nfl/nfl_projections_'+position+'.csv', index=False)
-    espn_df.to_csv(basedir + '/../../data/projections/espn/espn_projections_'+position+'.csv', index=False)
+    for df in projections:
+        df.to_csv(basedir + '/../../data/projections/'+df.name+'/'+df.name+'_projections_'+position+'.csv', index=False)
 
-    print(cbs_df)
-    print(nfl_df)
-    print(espn_df)
+# renames the columns so that they are all standard.
+# Expected value passed in is a dictionary where the
+def renameColumns(projections, position):
+    fp_df = projections['fp']
+    nfl_df = projections['nfl']
+
+    if position == 'qb':
+        fp_df = fp_df.rename(columns={'ATT.1': 'RUSH ATT', 'YDS.1': 'RUSH YDS','TDS.1': 'RUSH TDS'})
+        nfl_df = nfl_df.rename(columns={'Int': 'INTS','TD': 'TDS', 'YDS.1': 'RUSH YDS', 'TD.1': 'RUSH TDS', 'Lost': 'FL'})
 
 def runSanitize():
     positions = ['qb', 'rb', 'wr', 'te', 'k', 'def']

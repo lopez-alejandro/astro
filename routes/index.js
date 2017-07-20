@@ -4,6 +4,7 @@ var router = express.Router();
 import { getTable, get_nfl_projections} from '../server/utils/nflProjections';
 import { get_cbs_projections} from '../server/utils/cbsProjections';
 import { get_espn_projections} from '../server/utils/espnProjections';
+import { get_fp_projections } from '../server/utils/fpProjections'
 import { getAverageProjections } from '../server/shell';
 
 /* GET home page. */
@@ -11,7 +12,7 @@ router.get('/', async function(req, res, next) {
   await get_nfl_projections();
   await get_espn_projections();
   await get_cbs_projections();
-
+  await get_fp_projections();
   res.send('hi');
 });
 
