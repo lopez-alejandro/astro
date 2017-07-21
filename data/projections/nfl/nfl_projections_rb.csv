@@ -1,4 +1,4 @@
-Player,Opp,GP,Yds,TD,Int,Yds.1,TD.1,Yds.2,TD.2,FumTD,2PT,Lost,Points
+Player,Opp,GP,Yds,TD,Int,RUSH YDS,RUSH TDS,REC TDS,REC TDS,FumTD,2PT,FL,Points
 Aaron Jones,SEA,16,-,-,-,271.51,1.95,96.34,0.49,-,0.15,0.64,50.45
 Aaron Ripkowski,SEA,16,-,-,-,209.22,2.3,91.21,0.59,-,0.14,0.48,46.7
 Adrian Peterson,@MIN,16,-,-,-,624.28,3.8,130.05,0.44,-,0.27,1.36,98.69

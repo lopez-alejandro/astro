@@ -1,4 +1,4 @@
-Player,Opp,GP,Yds,TD,Int,Yds.1,TD.1,Yds.2,TD.2,FumTD,2PT,Lost,Points
+Player,Opp,GP,Yds,TD,Int,RUSH YDS,RUSH TDS,REC YDS,REC TDS,FumTD,2PT,FL,Points
 A.J. Green,BAL,16,-,-,-,0.7,0.02,1161.03,7.1,-,0.06,0.55,157.91
 Aaron Burbridge,CAR,-,-,-,-,-,-,-,-,-,-,-,0.0
 Adam Humphries,@MIA,16,-,-,-,15.49,0.13,702.49,3.95,-,0.12,0.51,95.5

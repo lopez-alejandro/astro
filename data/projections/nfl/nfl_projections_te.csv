@@ -1,4 +1,4 @@
-Player,Opp,GP,Yds,TD,Int,Yds.1,TD.1,Yds.2,TD.2,FumTD,2PT,Lost,Points
+Player,Opp,GP,Yds,TD,Int,Yds.1,TD.1,REC YDS,REC TDS,FumTD,2PT,FL,Points
 Adam Shaheen,ATL,16,-,-,-,4.58,0.05,118.61,0.81,-,0.04,0.18,17.2
 Anthony Fasano,TB,16,-,-,-,0.17,0.02,91.66,0.62,-,0.09,0.03,13.14
 Antonio Gates,@DEN,16,-,-,-,-,0.02,633.41,4.65,-,0.11,0.28,91.02

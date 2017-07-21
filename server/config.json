@@ -1,0 +1,18 @@
+"leagueSettings": {
+  "passYardsMultiplier": 0.04,
+  "passTouchdownMultiplier": 4,
+  "passInterceptionMultiplier": -2,
+  "rushYardsMultiplier": 0.1,
+  "rushTouchdownMultplier": 6,
+  "recYardsMultiplier": 0.1,
+  "recMultiplier": 1,
+  "recTouchdownMultiplier": 6,
+  "fumbleLostMultiplier": -2,
+  "patMultiplier": 1,
+  "fieldGoalMadeMultiplier": 3,
+  "sackMultiplier": 1,
+  "returnTouchdownMultiplier": 6,
+  "fumbleRecoveredMultiplier": 2,
+  "safetyMultiplier": 2,
+  "defInterceptionMultiplier": 2,
+}
