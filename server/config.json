@@ -1,4 +1,4 @@
-"leagueSettings": {
+{
   "passYardsMultiplier": 0.04,
   "passTouchdownMultiplier": 4,
   "passInterceptionMultiplier": -2,
@@ -14,5 +14,5 @@
   "returnTouchdownMultiplier": 6,
   "fumbleRecoveredMultiplier": 2,
   "safetyMultiplier": 2,
-  "defInterceptionMultiplier": 2,
+  "defInterceptionMultiplier": 2
 }

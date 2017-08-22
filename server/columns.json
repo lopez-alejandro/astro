@@ -1,0 +1,22 @@
+{
+  "PASS_YDS": "PASS YDS",
+  "PASS_TDS": "PASS TDS",
+  "INTS": "INTS",
+  "RUSH_ATT": "RUSH ATT",
+  "RUSH_YDS": "RUSH YDS",
+  "RUSH_TDS": "RUSH TDS",
+  "REC_YDS": "REC YDS",
+  "REC_TDS": "REC TDS",
+  "FL": "FL",
+  "FG": "FG",
+  "XPT": "XPT",
+  "FG_ONE": "FG ONE",
+  "FG_TWO": "FG TWO",
+  "FG_THREE": "FG THREE",
+  "FG_FOUR": "FG FOUR",
+  "FR": "FR",
+  "TDS": "TDS",
+  "SAFETY": "SAFETY",
+  "SACKS": "SACKS",
+  "Points": "Points"
+}

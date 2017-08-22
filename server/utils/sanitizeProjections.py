@@ -108,11 +108,11 @@ def renameColumns(projections, position):
         nfl_df = nfl_df.rename(columns={'Yds.1': 'RUSH YDS', 'TD.1': 'RUSH TDS', 'Yds.2': 'REC TDS', 'TD.2': 'REC TDS', 'Lost': 'FL'})
 
     if position == 'wr':
-        fp_df = fp_df.rename(columns={'YDS': 'RUSH YDS', 'TDS': 'RUSH TDS', 'YDS.1': 'REC YDS', 'TDS.1': ' REC TDS'})
+        fp_df = fp_df.rename(columns={'YDS': 'RUSH YDS', 'TDS': 'RUSH TDS', 'YDS.1': 'REC YDS', 'TDS.1': 'REC TDS'})
         nfl_df = nfl_df.rename(columns={'Yds.1': 'RUSH YDS', 'TD.1': 'RUSH TDS', 'Yds.2': 'REC YDS', 'TD.2': 'REC TDS', 'Lost': 'FL'})
 
     if position == 'te':
-        fp_df = fp_df.rename(columns={'YDS': 'REC YDS', 'TDS': 'REC YDS'})
+        fp_df = fp_df.rename(columns={'YDS': 'REC YDS', 'TDS': 'REC TDS'})
         nfl_df = nfl_df.rename(columns={'Yds.2': 'REC YDS', 'TD.2': 'REC TDS', 'Lost': 'FL'})
 
     if position == 'k':
