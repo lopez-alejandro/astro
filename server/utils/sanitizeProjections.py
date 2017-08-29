@@ -45,16 +45,16 @@ def sanitize(position):
         cbs_row_skip = 1
         fp_row_skip = 0
     print('/../../data/projections/cbs/cbs_projections_'+position+'.csv')
-    cbs_df = pd.read_csv(basedir + '/../../data/projections/cbs/cbs_projections_'+position+'.csv', skiprows=cbs_row_skip).rename(columns={'FPTS': 'Points'}).sort_values('Player')
+    cbs_df = pd.read_csv(basedir + '/../../data/projections/cbs/cbs_projections_'+position+'.csv', skiprows=cbs_row_skip).rename(columns={'FPTS': 'Points'})
     cbs_df.name = 'cbs'
 
-    nfl_df = pd.read_csv(basedir + '/../../data/projections/nfl/nfl_projections_'+position+'.csv', skiprows=1).rename(columns={'Team': 'Player'}).sort_values('Player')
+    nfl_df = pd.read_csv(basedir + '/../../data/projections/nfl/nfl_projections_'+position+'.csv', skiprows=1).rename(columns={'Team': 'Player'})
     nfl_df.name = 'nfl'
 
-    espn_df = pd.read_csv(basedir + '/../../data/projections/espn/espn_projections_'+position+'.csv', skiprows=1).rename(columns={'PLAYER, TEAM POS':'Player', 'PTS': 'Points'}).sort_values('Player')
+    espn_df = pd.read_csv(basedir + '/../../data/projections/espn/espn_projections_'+position+'.csv', skiprows=1).rename(columns={'PLAYER, TEAM POS':'Player', 'PTS': 'Points'})
     espn_df.name = 'espn'
 
-    fp_df = pd.read_csv(basedir + '/../../data/projections/fp/fp_projections_'+position+'.csv', skiprows=fp_row_skip).rename(columns={'FPTS': 'Points'}).sort_values('Player')
+    fp_df = pd.read_csv(basedir + '/../../data/projections/fp/fp_projections_'+position+'.csv', skiprows=fp_row_skip).rename(columns={'FPTS': 'Points'})
     fp_df.name = 'fp'
 
     projections = [ cbs_df, nfl_df, espn_df, fp_df ]
