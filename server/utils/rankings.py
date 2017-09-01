@@ -57,15 +57,24 @@ def populateRankings():
     k_df['STD DEV'] = ""
     def_df['STD DEV'] = ""
 
+    qb_df['ADP DIF'] = ""
+    rb_df['ADP DIF'] = ""
+    wr_df['ADP DIF'] = ""
+    te_df['ADP DIF'] = ""
+    k_df['ADP DIF'] = ""
+    def_df['ADP DIF'] = ""
+
     # go through each position and populate the respective position that has that name with their ADP and STD DEV
     for index, row in qb_df.iterrows():
         r = qb_rank_df.loc[qb_rank_df['Player'] == row['Player']]
         if r.empty == False:
             row['ADP'] = float(r['ADP'])
             row['STD DEV'] = float(r['Std Dev'])
+            row['ADP DIF'] = float(r['vs. ADP'])
         else:
             row['ADP'] = ""
             row['STD DEV'] = ""
+            row['ADP DIF'] = ""
         qb_df.iloc[index] = row
 
     value_list.append(qb_df)
@@ -75,9 +84,11 @@ def populateRankings():
         if r.empty == False:
             row['ADP'] = float(r['ADP'])
             row['STD DEV'] = float(r['Std Dev'])
+            row['ADP DIF'] = float(r['vs. ADP'])
         else:
             row['ADP'] = ""
             row['STD DEV'] = ""
+            row['ADP DIF'] = ""
         rb_df.iloc[index] = row
 
     value_list.append(rb_df)
@@ -87,9 +98,11 @@ def populateRankings():
         if r.empty == False:
             row['ADP'] = float(r['ADP'])
             row['STD DEV'] = float(r['Std Dev'])
+            row['ADP DIF'] = float(r['vs. ADP'])
         else:
             row['ADP'] = ""
             row['STD DEV'] = ""
+            row['ADP DIF'] = ""
         wr_df.iloc[index] = row
 
     value_list.append(wr_df)
@@ -99,9 +112,11 @@ def populateRankings():
         if r.empty == False:
             row['ADP'] = float(r['ADP'])
             row['STD DEV'] = float(r['Std Dev'])
+            row['ADP DIF'] = float(r['vs. ADP'])
         else:
             row['ADP'] = ""
             row['STD DEV'] = ""
+            row['ADP DIF'] = ""
         te_df.iloc[index] = row
 
     value_list.append(te_df)
@@ -111,9 +126,11 @@ def populateRankings():
         if r.empty == False:
             row['ADP'] = float(r['ADP'])
             row['STD DEV'] = float(r['Std Dev'])
+            row['ADP DIF'] = float(r['vs. ADP'])
         else:
             row['ADP'] = ""
             row['STD DEV'] = ""
+            row['ADP DIF'] = ""
         k_df.iloc[index] = row
 
     value_list.append(k_df)
@@ -123,9 +140,11 @@ def populateRankings():
         if r.empty == False:
             row['ADP'] = float(r['ADP'])
             row['STD DEV'] = float(r['Std Dev'])
+            row['ADP DIF'] = float(r['vs. ADP'])
         else:
             row['ADP'] = ""
             row['STD DEV'] = ""
+            row['ADP DIF'] = ""
         def_df.iloc[index] = row
     value_list.append(def_df)
 

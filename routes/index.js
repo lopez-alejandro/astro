@@ -42,6 +42,11 @@ router.get('/data', async function(req, res, next) {
 
 });
 
+router.get('/prepareData', async function(req, res, next) {
+  await readData();
+  res.send('loaded data');
+});
+
 router.get('/nextDraft', async function(req, res, next) {
   let teamObj = {
     qb: 2,
@@ -53,7 +58,7 @@ router.get('/nextDraft', async function(req, res, next) {
   };
   let draftedPlayers = ['Aaron Rodgers', 'David Johnson', 'Le\'Veon Bell'];
 
-  await readData();
+
   const nextPlayer = await getNextPrediction(teamObj, draftedPlayers);
   res.send(nextPlayer);
 });

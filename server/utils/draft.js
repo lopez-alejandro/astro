@@ -1,5 +1,7 @@
 import csvtojson from 'csvtojson'
 var path = require('path');
+
+// variables used to store our data from csv files
 let qb = {};
 let rb = {};
 let wr = {};
@@ -7,8 +9,11 @@ let te = {};
 let k = {};
 let def = {};
 
+/**
+ * Helper function that reads the csv files and puts them into js objects
+ * @return {[type]} [description]
+ */
 export async function readData() {
-
 
   let qbPromise = new Promise( resolve => {
     let index = 0;
@@ -193,7 +198,8 @@ export async function getHighestValue(position, draftedPlayers) {
   let max = 0;
   let player = {
     name: '',
-    value: 0
+    value: 0,
+    risk: 0
   };
   // search through all qbs sorted by value
   for(let index in obj) {
@@ -203,9 +209,10 @@ export async function getHighestValue(position, draftedPlayers) {
         max = parseFloat(obj[index].Value);
         player.name = obj[index].Player;
         player.value = max;
+        player.risk = parseFloat(obj[index]['STD DEV']);
       }
     }
   }
-
+  console.log(player);
   return player;
 };
