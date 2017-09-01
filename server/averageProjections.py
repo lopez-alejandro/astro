@@ -4,6 +4,7 @@ import os
 import json
 import locale
 from locale import atof
+import sys
 
 locale.setlocale(locale.LC_NUMERIC, '')
 
@@ -215,4 +216,6 @@ def computeAverages():
         position = positions_list[index]
         curr_df.to_csv(basedir + '/../data/projections/averages/'+ position + '.csv', index = False)
 
-computeAverages();
+    print('made it to the end, it works!')
+
+computeAverages()

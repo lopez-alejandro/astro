@@ -70,6 +70,7 @@ def sanitize(position):
             if position == 'def':
                 rosterIndex = proj[proj['Player'].str.contains(row['lname'])]
             else:
+
                 rosterIndex = proj[proj['Player'].str.contains(row['displayName'])]
             if rosterIndex.empty == False:
                 # we are in the roster, replace name in dataframe with roster name
@@ -129,6 +130,7 @@ def renameColumns(projections, position):
 
 
 def runSanitize():
+    print('running sanitize')
     positions = ['qb', 'rb', 'wr', 'te', 'k', 'def']
     for pos in positions:
         sanitize(pos)
@@ -156,7 +158,6 @@ def runRenameColumns():
         projections = loadPositionDataFrame(pos)
         renameColumns(projections, pos)
 
-
-#sanitizeQb()
 runSanitize()
 runRenameColumns()
+#sanitizeQb()

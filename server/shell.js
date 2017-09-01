@@ -1,23 +1,22 @@
-import pythonShell from 'python-shell';
+import PythonShell from 'python-shell';
 var path = require('path');
 
-export function getAverageProjections() {
+export async function getAverageProjections() {
   var dir = path.join(__dirname, 'averageProjections.py');
   console.log(dir);
-  var options = {
+
+  let options = {
+    mode: 'text',
+    pythonPath: '/usr/local/bin/python2.7',
+    pythonOptions: ['-u'],
     scriptPath: __dirname,
-    mode: 'text'
+    args: ['hello']
   };
 
-  let pyshell = new pythonShell('averageProjections.py', options);
+  PythonShell.run('averageProjections.py',options, function(err){
+      if(err) throw err;
 
-  pyshell.on('message', function(message) {
-    console.log(message);
-  });
-
-  pyshell.end(function(err){
-    if(err) throw err;
-    console.log('finished');
+      console.log('finished');
   });
   /*
   pyshell.run('averageProjections.py', options,function(err) {
@@ -28,4 +27,43 @@ export function getAverageProjections() {
     console.log('finished');
   });
   */
+}
+
+export default async function initData() {
+  var dir = path.join(__dirname, 'averageProjections.py');
+  console.log(dir);
+
+  let options = {
+    mode: 'text',
+    pythonPath: '/usr/local/bin/python2.7',
+    pythonOptions: ['-u'],
+    scriptPath: path.join(__dirname, 'utils'),
+    args: []
+  };
+
+  PythonShell.run('sanitizeProjections.py', options, function(err) {
+    if(err) console.log(err);
+
+    let optionsA = {
+      mode: 'text',
+      pythonPath: '/usr/local/bin/python2.7',
+      pythonOptions: ['-u'],
+      scriptPath: __dirname,
+      args: []
+    };
+    PythonShell.run('averageProjections.py',optionsA, function(err){
+        if(err) console.log(err);
+
+        PythonShell.run('valueOverReplacement.py', options, function(err) {
+          if(err) throw err;
+
+          PythonShell.run('rankings.py',options, function(err) {
+            if(err) console.log(err);
+
+          });
+        });
+    });
+  });
+
+
 }

@@ -1,26 +1,26 @@
 Player,Opp,GP,SACKS,INTS,FR,SAFETY,TDS,Def 2pt Ret,TD.1,Pts Allow,Points
-Minnesota Vikings,NO,16,39.27,16.97,10.56,0.54,2.32,-,0.44,327.2,111.97
-Seattle Seahawks,@GB,16,37.8,16.4,10.72,0.68,2.23,-,0.49,302.66,109.72
-Denver Broncos,LAC,16,35.93,16.78,10.68,0.59,2.2,-,0.47,347.5,108.05
-Los Angeles Rams,IND,16,35.72,18.04,10.45,0.55,1.82,-,0.49,225.09,107.66
-Atlanta Falcons,@CHI,16,38.13,15.66,10.5,0.56,2.07,-,0.49,308.4,106.93
-Jacksonville Jaguars,@HOU,16,37.8,15.65,10.45,0.53,2.08,-,0.5,349.83,106.54
-Carolina Panthers,@SF,16,35.87,16.58,10.33,0.55,2.1,-,0.48,369.5,106.27
-New England Patriots,KC,16,36.53,15.62,10.47,0.54,1.98,-,0.51,353.21,104.73
-Houston Texans,JAX,16,37.45,15.39,10.25,0.65,1.75,-,0.46,352.83,103.29
-Pittsburgh Steelers,@CLE,16,36.9,15.26,10.19,0.56,1.9,-,0.45,347.7,103.02
-Green Bay Packers,SEA,16,37.51,15.58,9.84,0.54,1.79,-,0.47,349.93,102.99
-Chicago Bears,ATL,16,38.71,15.01,9.86,0.54,1.73,-,0.44,361.66,102.55
-Kansas City Chiefs,@NE,16,33.87,16.36,9.88,0.57,1.91,-,0.6,357.09,102.55
-Tennessee Titans,OAK,16,37.71,14.63,10.38,0.53,1.78,-,0.46,352.23,102.23
-New Orleans Saints,@MIN,16,36.81,14.33,11.13,0.54,1.57,-,0.5,356.91,101.23
-Philadelphia Eagles,@WAS,16,32.66,16.58,10.18,0.57,1.82,-,0.47,371.45,101.06
-Indianapolis Colts,@LA,16,36.73,14.86,10.12,0.54,1.71,-,0.49,345.58,100.97
-Baltimore Ravens,@CIN,16,34.38,15.17,10.05,0.53,1.87,-,0.44,353.53,99.74
-New York Giants,@DAL,16,33.03,15.55,10.51,0.55,1.6,-,0.52,342.19,98.97
-Los Angeles Chargers,@DEN,16,35.33,14.13,10.6,0.58,1.66,-,0.45,367.34,98.61
-Buffalo Bills,NYJ,16,37.02,14.4,9.77,0.53,1.51,-,0.46,373.96,98.24
-New York Jets,@BUF,16,35.95,13.88,10.43,0.55,1.61,-,0.48,351.31,98.21
-Arizona Cardinals,@DET,16,34.47,14.52,10.53,0.54,1.56,-,0.51,373.23,98.07
-Tampa Bay Buccaneers,@MIA,16,36.72,14.7,10.1,0.53,1.29,-,0.45,369.44,97.82
-Detroit Lions,ARI,16,33.87,14.62,10.22,0.53,1.7,-,0.44,375.23,97.45
+Minnesota Vikings,NO,16,39,16,10,-,2,-,-,327,111.0
+Seattle Seahawks,@GB,16,37,16,10,-,2,-,-,302,109.0
+Denver Broncos,LAC,16,35,16,10,-,2,-,-,347,108.0
+Los Angeles Rams,IND,16,35,18,10,-,1,-,-,225,107.0
+Atlanta Falcons,@CHI,16,38,15,10,-,2,-,-,308,106.0
+Jacksonville Jaguars,@HOU,16,37,15,10,-,2,-,-,349,106.0
+Carolina Panthers,@SF,16,35,16,10,-,2,-,-,369,106.0
+New England Patriots,KC,16,36,15,10,-,1,-,-,353,104.0
+Pittsburgh Steelers,@CLE,16,36,15,10,-,1,-,-,347,103.0
+Houston Texans,JAX,16,37,15,10,-,1,-,-,352,103.0
+Chicago Bears,ATL,16,38,15,9,-,1,-,-,361,102.0
+Kansas City Chiefs,@NE,16,33,16,9,-,1,-,-,357,102.0
+Green Bay Packers,SEA,16,37,15,9,-,1,-,-,349,102.0
+Tennessee Titans,OAK,16,37,14,10,-,1,-,-,352,102.0
+Philadelphia Eagles,@WAS,16,32,16,10,-,1,-,-,371,101.0
+New Orleans Saints,@MIN,16,36,14,11,-,1,-,-,356,101.0
+Indianapolis Colts,@LA,16,36,14,10,-,1,-,-,345,100.0
+Baltimore Ravens,@CIN,16,34,15,10,-,1,-,-,353,99.0
+Buffalo Bills,NYJ,16,37,14,9,-,1,-,-,373,98.0
+Arizona Cardinals,@DET,16,34,14,10,-,1,-,-,373,98.0
+Los Angeles Chargers,@DEN,16,35,14,10,-,1,-,-,367,98.0
+New York Giants,@DAL,16,33,15,10,-,1,-,-,342,98.0
+New York Jets,@BUF,16,35,13,10,-,1,-,-,351,98.0
+Cincinnati Bengals,BAL,16,32,15,10,-,1,-,-,355,97.0
+Tampa Bay Buccaneers,@MIA,16,36,14,10,-,1,-,-,369,97.0
